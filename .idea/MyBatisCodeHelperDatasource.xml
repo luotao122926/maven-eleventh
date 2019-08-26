@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="javaMapperPackage" value="com.vip.project.mapper" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/src/main/java" />
+        <option name="javaModelPackage" value="com.vip.project.entity" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="maven-eleventh" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="maven-eleventh">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.vip.project.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="javaModelPacakge" value="com.vip.project.entity" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="xmlPackage" value="mappers" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="project_second:banner">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="banner_id" />
+                  <option name="javaModelName" value="Banner" />
+                  <option name="moduleName" value="maven-eleventh" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="project_second:category">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="cate_id" />
+                  <option name="javaModelName" value="Category" />
+                  <option name="moduleName" value="maven-eleventh" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="project_second:navigation">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="nav_id" />
+                  <option name="javaModelName" value="Navigation" />
+                  <option name="moduleName" value="maven-eleventh" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="project_second:shop">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="Shop" />
+                  <option name="moduleName" value="maven-eleventh" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="project_second:sub_menu">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="sub_menu_id" />
+                  <option name="javaModelName" value="SubMenu" />
+                  <option name="moduleName" value="maven-eleventh" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="project_second:sub_menu1">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="sub_menu2_id" />
+                  <option name="javaModelName" value="SubMenu1" />
+                  <option name="moduleName" value="maven-eleventh" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="useLomBokOnModel" value="true" />
+        <option name="xmlMapperPackage" value="mappers" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/src/main/resources" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>

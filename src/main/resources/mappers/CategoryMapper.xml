@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vip.project.mapper.ICategoryMapper">
+    <resultMap id="cate_MenuresultMap" type="com.vip.project.domain.vo.CategoryVo">
+        <id property="cateId" column="cate_id"/>
+        <result property="cateName" column="cate_name"/>
+        <collection property="menuList" resultMap="com.vip.project.mapper.ISubMenuMapper.base_resultMap"/>
+    </resultMap>
+
+    <select id="findAllCate" resultMap="cate_MenuresultMap">
+        select c.cate_id , c.cate_name , sm.menu_name , sm.sub_menu_id , sm1.menu1_name , sm1.sub_menu2_id
+        from category c
+        left join sub_menu sm on sm.cate_id = c.cate_id
+        left join sub_menu1 sm1 on sm1.sub_menu_id = sm.sub_menu_id
+        where c.status = 1
+    </select>
+
+    <resultMap id="cate_shopResultMap" type="com.vip.project.domain.vo.CategoryVo">
+        <id property="cateId" column="cate_id"/>
+        <result property="cateName" column="cate_name"/>
+        <collection property="shopList" resultMap="com.vip.project.mapper.IShopImage.shop_resultMap"/>
+    </resultMap>
+
+    <select id="findAllShop" resultMap="cate_shopResultMap">
+        select c.cate_id , c.cate_name , s.shop_id, s.shop_name
+        from category c
+        left join shop s on c.cate_id = s.cate_id
+        where c.status = 1
+    </select>
+
+</mapper>

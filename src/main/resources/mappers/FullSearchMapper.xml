@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vip.project.mapper.IFullSearchMapper">
+
+    <resultMap id="cate_shopResultMap" type="com.vip.project.domain.vo.CategoryVo">
+        <id property="cateId" column="cate_id"/>
+        <result property="cateName" column="cate_name"/>
+        <collection property="shopList" resultMap="com.vip.project.mapper.IShopImage.shop_resultMap"/>
+    </resultMap>
+
+    <resultMap id="shop_resultMap" type="com.vip.project.domain.entity.Shop">
+        <id property="shopId" column="shop_id"/>
+        <result property="shopName" column="shop_name"/>
+        <result property="subTitle" column="sub_title"/>
+        <result property="cateId" column="cate_id"/>
+        <result property="originalPrice" column="original_price"/>
+        <result property="promotePrice" column="promote_price"/>
+    </resultMap>
+
+    <select id="bulrSearch" resultMap="shop_resultMap">
+        select s.shop_name , s.sub_title , s.shop_id , s.original_price , s.cate_id
+        from shop s
+        where s.shop_name like concat('%' , #{word} , '%')
+            or s.sub_title like concat('%', #{word} , '%')
+    </select>
+
+</mapper>

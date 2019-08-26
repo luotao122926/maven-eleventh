@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vip.project.mapper.IBannerMapper">
+    <resultMap id="banner_resultMap" type="com.vip.project.domain.entity.Banner">
+        <id property="bannerId" column="banner_id"/>
+        <result property="title" column="title"/>
+        <result property="image" column="image"/>
+        <result property="detailUrl" column="detail_url"/>
+    </resultMap>
+
+    <select id="findAllBanner" resultMap="banner_resultMap">
+        select b.banner_id , b.title , b.detail_url , b.image
+        from banner b
+        where b.status = 1
+    </select>
+
+</mapper>
